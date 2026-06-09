@@ -7,8 +7,9 @@
                 <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Description</th>
                     <th>Price</th>
+                    <th>Qty</th>
+                    <th>Category</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,8 +17,9 @@
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $product->name }}</td>
-                        <td>{{ $product->description }}</td>
                         <td>{{ number_format($product->price, 2) }}</td>
+                        <td>{{ $product->quantity }}</td>
+                        <td>{{ $product->category->name }}</td>
                     </tr>
                 @endforeach
             </tbody>
