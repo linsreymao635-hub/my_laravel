@@ -25,7 +25,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        echo $product->category->name; // or pass to view
+        echo $product->category->name; 
     }
 
     // Loop all products in a category
